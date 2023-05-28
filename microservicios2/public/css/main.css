@@ -1,0 +1,43 @@
+body {
+    color: white;
+}
+
+.owntable {
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+
+th {
+    background-color: #001f3f;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    background-color: #0074D9;
+    color: white;
+    padding: 10px;
+}
+
+button {
+    background-color: #0074D9;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.aprobado{
+    background-color: olivedrab;
+    color: white;
+    padding: 10px;
+}
+.reprobado{
+    background-color: brown;
+    color: white;
+    padding: 10px;
+}
+
