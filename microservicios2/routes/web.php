@@ -14,19 +14,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/', [
     EstudiantesController::class, 'index'
 ])->name('index');
 
-Route::resource('index', EstudiantesController::class);
 Route::get('/index/{id}/destroy', [
     EstudiantesController::class, 'destroy'
-])->name('destroy.estudiantes');
+]);
+Route::get('/', [
+    EstudiantesController::class, 'index'
+]);
+$router->post('create', 'App\Http\Controllers\EstudiantesController@store');
 
 Route::resource('actividades', ActividadesController::class);
 Route::get('/actividades/{id}/destroy', [

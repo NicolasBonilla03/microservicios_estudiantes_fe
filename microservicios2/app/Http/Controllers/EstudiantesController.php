@@ -37,12 +37,14 @@ class EstudiantesController extends Controller
      */
     public function store(Request $request)
     {
+        dd('cesar');
         $estudiante = new Estudiante();
 
         $estudiante->codigo = $request->codigo;
         $estudiante->nombres = $request->nombres;
         $estudiante->apeliidos = $request->apellidos;
-        return response()->json();
+        $estudiante->save();
+        return response()->json('Estudiante registrado', 200);
     }
 
     /**
